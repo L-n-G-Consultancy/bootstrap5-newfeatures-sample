@@ -1,0 +1,44 @@
+$primary: crimson;
+
+$grid-columns:      12;
+$grid-gutter-width: 1.5rem;
+
+$utilities: () !default;
+$utilities: map-merge(
+  (
+      'border-radius':(
+        property:border-radius,
+        class:br,
+        values:(
+            0:0,
+            1:10px,
+            2:20px,
+            3:30px,
+            4:40px,
+            5:50px,
+        )
+      ),
+      'margin-top':(
+          property:margin-top,
+          class:mt,
+          values:(
+              150:150px,
+              250:250px,
+              500:500px,
+          )
+      ),
+      'border-color':(
+          property:border-color,
+          class:bc,
+          responsive:true,
+          values:(
+            black:black,
+            primary:$primary,
+            red:red
+          )
+      )
+    ),
+    $utilities
+  );
+
+@import './bootstrap/scss/bootstrap.scss';
